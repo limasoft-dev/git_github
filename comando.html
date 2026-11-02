@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comandos do Git</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+        }
+
+        table {
+            width: 100%;
+            background: #ffffff;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 6px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+     <h1>Os Comandos do git classificados</h1>
+    <p>Aprenderas alguns comandos do Git</p>
+
+    <!-- 1. Comandos básicos -->
+    <h2> Comandos básicos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>git init</code></td>
+                <td>Cria um novo repositório Git.</td>
+              
+            </tr>
+            <tr>
+                <td><code>git clone "url"</code></td>
+                <td>Clona um repositório remoto.</td>
+               
+            </tr>
+            <tr>
+                <td><code>git status</code></td>
+                <td>Mostra arquivos modificados, rastreados e não rastreados.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git add .</code></td>
+                <td>Adiciona todas as alterações à área de staging.</td>
+               
+            </tr>
+            <tr>
+                <td><code>git commit -m "mensagem"</code></td>
+                <td>Registra as alterações no repositório.</td>
+              
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 2. Visualização e histórico -->
+    <h2> Visualização e histórico</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>git log</code></td>
+                <td>Exibe o histórico de commits.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git log --stat</code></td>
+                <td>Mostra resumo das alterações.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git diff</code></td>
+                <td>Mostra diferenças entre versões.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git show "hash"</code></td>
+                <td>Mostra detalhes de um commit específico.</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 3. Trabalhando com branches -->
+    <h2> Trabalhando com branches</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>git branch</code></td>
+                <td>Lista branches.</td>
+               
+            </tr>
+            <tr>
+                <td><code>git checkout -b nome</code></td>
+                <td>Cria e muda para um novo branch.</td>
+               
+            </tr>
+            <tr>
+                <td><code>git merge nome</code></td>
+                <td>Mescla um branch ao atual.</td>
+              
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 4. Repositórios remotos -->
+    <h2> Repositórios remotos</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>git remote add origin "url"</code></td>
+                <td>Adiciona repositório remoto.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git push origin master</code></td>
+                <td>Envia commits para o repositório remoto.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git pull</code></td>
+                <td>Baixa e mescla alterações do remoto.</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 5. Desfazendo alterações -->
+    <h2> Desfazendo alterações</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>git checkout nome_do_arquivo</code></td>
+                <td>Desfaz mudanças antes do commit.</td>
+               
+            </tr>
+            <tr>
+                <td><code>git reset HEAD nome_do_arquivo</code></td>
+                <td>Remove arquivo da área de staging.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git reset --soft/mixed/hard "hash"</code></td>
+                <td>Desfaz commits em diferentes níveis.</td>
+               
+            </tr>
+            <tr>
+                <td><code>git revert "hash"</code></td>
+                <td>Cria commit que desfaz outro commit.</td>
+               
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 6. Configurações úteis -->
+    <h2> Configurações úteis</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>git config --global user.name "O teu Nome"</code></td>
+                <td>Define nome do usuário.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git config --global user.email "email@exemplo.com"</code></td>
+                <td>Define e-mail.</td>
+                
+            </tr>
+            <tr>
+                <td><code>git config --list</code></td>
+                <td>Lista configurações.</td>
+               
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

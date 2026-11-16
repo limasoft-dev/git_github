@@ -1,0 +1,96 @@
+/*Titulos principais*/
+h1 {
+  text-align: center;
+    color: rgb(1, 95, 184);
+}
+/*Titulos secundarios*/
+h3 {
+    color: rgb(1, 95, 184);
+}
+/*Paragráfos*/
+p {
+    color: rgb(58, 58, 58);
+    font-size: 14px;
+}
+
+
+/*Titulos mais atraetes*/
+.titulo-impactante {
+  font-size: 3rem;
+  font-weight: 800;
+  /* Cria o gradiente no texto */
+  background: linear-gradient(270deg, #ff4500, #ff8c00, #e0115f, #008080);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Animação para mover o gradiente */
+  animation: MoverGradiente 8s ease infinite;
+}
+
+
+@keyframes MoverGradiente {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+
+
+/* Opção 1: Cor de fundo sólida e texto branco */
+th {
+  background-color:  rgb(1, 95, 184); 
+  color: white;              /* Cor do texto */
+}
+
+
+/* Opção 2: Usar um gradiente moderno para chamar a atenção */
+th {
+  background: linear-gradient(135deg,  rgb(1, 95, 184), rgb(1, 95, 184) ); 
+  color: #ffffff;
+}
+
+
+/* Opção 3: Mudar a cor apenas quando o utilizador passa o rato (Hover) */
+th:hover {
+  background-color: rgb(1, 95, 184) ; 
+}
+
+
+/*Cor dos td*/
+td {
+  color: rgb(1, 95, 184); 
+}
+
+
+/* 1. Alinhamento horizontal com Flexbox */
+.container-tabelas {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  
+  /* ALTERAÇÃO AQUI: Remove o width: 100% e adiciona estas duas linhas */
+  width: max-content;        /* Faz o bloco ter apenas o tamanho real das tabelas */
+  max-width: 800px;          /* Define um limite máximo para não esticarem demasiado */
+}
+
+
+
+/* 2. Configurações das tabelas */
+table {
+  flex: 1; /* Força as tabelas a dividirem o espaço igualmente */
+  border-collapse: collapse; /* Une as bordas duplas numa linha única */
+  font-family: Arial, sans-serif;
+}
+
+/* 3. Bordas e espaçamentos internos */
+th, td {
+  border: 1px solid #cbd5e1; /* Borda cinzenta fina */
+  padding: 5px;             /* Espaço interno para o texto respirar */
+  text-align: left;          /* Alinha o texto à esquerda */
+}
+
+/* 4. Cor do cabeçalho */
+th {
+  background-color: #0066cc; /* Azul idêntico ao da imagem */
+  color: #ffffff;            /* Texto branco */
+}
